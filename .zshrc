@@ -47,6 +47,7 @@ if [ -f ~/Downloads/google-cloud-sdk/path.zsh.inc ]; then source '/Users/sascha/
 
 # The next line enables shell command completion for gcloud.
 if [ -f ~/Downloads/google-cloud-sdk/completion.zsh.inc ]; then source '/Users/sascha/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 source <(kubectl completion zsh)
 source <(kustomize completion zsh)
@@ -58,7 +59,7 @@ PS1='$(kube_ps1)'$PS1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export BAT_THEME="Monokai Extended Light"
+export BAT_THEME="base16"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
@@ -69,7 +70,7 @@ source $(brew --prefix)/etc/profile.d/z.sh
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rd/bin:$HOME/.rvm/bin"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH:$HOME/.rd/bin:$HOME/.rvm/bin"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
