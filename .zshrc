@@ -17,6 +17,8 @@ plugins=(
   cd-gitroot
 )
 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -40,6 +42,7 @@ mkcd () {
 alias cdr='cd-gitroot'
 alias cat=bat
 alias grpo="git remote prune origin"
+alias gcms="gaa && gcmsg 'Update' && gp"
 alias clip="silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard"
 
 # The next line updates PATH for the Google Cloud SDK.
