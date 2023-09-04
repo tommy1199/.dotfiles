@@ -28,6 +28,11 @@ eval "$(fnm env --use-on-cd)"
 
 export LANG=en_US.UTF-8
 
+uao () {
+  unzip $1
+  (cd ${1:r} && idea .)
+}
+
 mkcd () {
   case "$1" in
     */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
@@ -54,6 +59,7 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 source <(kubectl completion zsh)
 source <(kustomize completion zsh)
+command -v timoni >/dev/null && . <(timoni completion zsh) && compdef _timoni timoni
 
 eval "$(direnv hook zsh)"
 
