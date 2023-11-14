@@ -78,6 +78,11 @@ source $(brew --prefix)/etc/profile.d/z.sh
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Add pyenv to PATH
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$(go env GOPATH)/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH:$HOME/.rd/bin:$HOME/.rvm/bin"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
