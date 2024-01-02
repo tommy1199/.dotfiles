@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH="/Users/sascha/.local/bin:$PATH"
+
 # If you come from bash you might have to change your $PATH.
 export ZSH="/Users/sascha/.oh-my-zsh"
 
@@ -15,6 +17,8 @@ plugins=(
   kubectl
   docker-compose
   cd-gitroot
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -49,6 +53,8 @@ alias cat=bat
 alias grpo="git remote prune origin"
 alias gcms="gaa && gcmsg 'Update' && gp"
 alias clip="silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard"
+alias vimc="nvim ~/.config/nvim/init.vim"
+alias vim="nvim"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f ~/Downloads/google-cloud-sdk/path.zsh.inc ]; then source '/Users/sascha/Downloads/google-cloud-sdk/path.zsh.inc'; fi
