@@ -23,7 +23,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ## Install powerlevel10k theme
 [ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-p10k configure
+rm ~/.p10k.zsh
+ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
 
 $(brew --prefix)/opt/fzf/install
 
