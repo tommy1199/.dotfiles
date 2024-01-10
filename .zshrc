@@ -13,12 +13,13 @@ export ZSH="/Users/sascha/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
+  cd-gitroot
+  docker
+  docker-compose
   git
   kubectl
-  docker-compose
-  cd-gitroot
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -48,12 +49,13 @@ mkcd () {
   esac
 }
 
-alias cdr='cd-gitroot'
 alias cat=bat
-alias grpo="git remote prune origin"
-alias gcms="gaa && gcmsg 'Update' && gp"
+alias cdr='cd-gitroot'
 alias clip="silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard"
-alias vimc="nvim ~/.config/nvim/init.vim"
+alias gcms="gaa && gcmsg 'Update' && gp"
+alias grpo="git remote prune origin"
+alias ls='lsd'
+alias vi="nvim"
 alias vim="nvim"
 
 # The next line updates PATH for the Google Cloud SDK.
