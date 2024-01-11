@@ -71,6 +71,7 @@ command -v timoni >/dev/null && . <(timoni completion zsh) && compdef _timoni ti
 
 eval "$(direnv hook zsh)"
 
+export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
 source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
