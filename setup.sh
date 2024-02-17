@@ -21,11 +21,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-## Install powerlevel10k theme
-[ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-rm ~/.p10k.zsh
-ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
-
 $(brew --prefix)/opt/fzf/install
 
 ## Install sdkman
@@ -47,10 +42,12 @@ curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.
 sudo mv kubectl-crossplane /opt/homebrew/bin
 
 ## Install color theme for iterm2
-curl https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors -o ~/Downloads/material-design-colors.itermcolors
+curl https://raw.githubusercontent.com/herrbischoff/iterm2-gruvbox/master/gruvbox.itermcolors -o ~/Downloads/gruvbox.itermcolors
 
 ## Link Brewfile and zshrc to home directory
-rm ~/Brewfile
+[ -f ~/Brewfile ] && rm /Brewfile
 ln -s ~/.dotfiles/Brewfile ~/Brewfile
-rm ~/.zshrc
+[ -f ~/.zshrc ] && rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+[ -f ~/.config/starship.toml ] && rm ~/.config/starship.toml
+ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
