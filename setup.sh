@@ -51,3 +51,6 @@ ln -s ~/.dotfiles/Brewfile ~/Brewfile
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 [ -f ~/.config/starship.toml ] && rm ~/.config/starship.toml
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
+
+## Link neovim configuration
+ln -s ~/.dotfiles/nvim ~/.config/nvim
