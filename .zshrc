@@ -39,7 +39,7 @@ mkcd () {
   esac
 }
 
-alias cat=bat
+alias cat='bat -p'
 alias cdr='cd-gitroot'
 alias clip="silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard"
 alias gcms="gaa && gcmsg 'Update' && gp"
