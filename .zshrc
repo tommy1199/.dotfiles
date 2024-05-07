@@ -8,6 +8,7 @@ plugins=(
   docker
   docker-compose
   git
+  gradle
   kubectl
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -19,8 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export JUST_SUPPRESS_DOTENV_LOAD_WARNING=1
-
-
 export LANG=en_US.UTF-8
 
 uao () {
@@ -62,6 +61,36 @@ command -v timoni >/dev/null && . <(timoni completion zsh) && compdef _timoni ti
 export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'lsd --color=always --tree {} | head -200'"
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'lsd --color=always --tree {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+    ssh)          fzf --preview 'dog --color=always {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+source ~/fzf-git.sh
 
 export BAT_THEME="gruvbox-dark"
 
@@ -79,3 +108,8 @@ eval "$(direnv hook zsh)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(ngrok completion)"
+eval "$(thefuck --alias fk)"
+
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward

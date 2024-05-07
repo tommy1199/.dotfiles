@@ -54,3 +54,4 @@ ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 
 ## Link neovim configuration
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/fzf-git.sh ~/fzf-git.sh
