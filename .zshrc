@@ -29,6 +29,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export JUST_SUPPRESS_DOTENV_LOAD_WARNING=1
 export LANG=en_US.UTF-8
+export EDITOR=nvim
+export VISUAL=nvim
 
 uao () {
   unzip $1
