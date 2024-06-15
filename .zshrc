@@ -31,6 +31,7 @@ export JUST_SUPPRESS_DOTENV_LOAD_WARNING=1
 export LANG=en_US.UTF-8
 export EDITOR=nvim
 export VISUAL=nvim
+export BAT_THEME="Catppuccin Macchiato"
 
 uao () {
   unzip $1
@@ -110,8 +111,6 @@ _fzf_comprun() {
 }
 
 source ~/fzf-git.sh
-
-export BAT_THEME="gruvbox-dark"
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
