@@ -59,6 +59,9 @@ ln -s ~/.dotfiles/fzf-git.sh ~/fzf-git.sh
 ## Link tmux configuration
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
-## Link bat themes and config
+## Link bat themes and configuration
 ln -s ~/.dotfiles/bat ~/.config/bat
 bat cache --build
+
+## Link alacritty configuration
+ln -s ~/.dotfiles/alacritty ~/.config/alacritty
