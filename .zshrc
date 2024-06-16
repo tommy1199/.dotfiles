@@ -31,6 +31,7 @@ export JUST_SUPPRESS_DOTENV_LOAD_WARNING=1
 export LANG=en_US.UTF-8
 export EDITOR=nvim
 export VISUAL=nvim
+export XDG_CONFIG_HOME="$HOME/.config"
 export BAT_THEME="Catppuccin Macchiato"
 
 uao () {

@@ -65,3 +65,7 @@ bat cache --build
 
 ## Link alacritty configuration
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+
+## Link lazygit configuration
+ln -s ~/.dotfiles/lazygit ~/.config/lazygit
+
