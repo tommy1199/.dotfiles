@@ -1,4 +1,4 @@
-export PATH="/Users/sascha/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin:/Users/sascha/.local/bin:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 export ZSH="/Users/sascha/.oh-my-zsh"
@@ -81,6 +81,8 @@ command -v timoni >/dev/null && . <(timoni completion zsh) && compdef _timoni ti
 
 export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
 
+
+eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(fzf --zsh)"
 
 show_file_or_dir_preview="if [ -d {} ]; then lsd --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"

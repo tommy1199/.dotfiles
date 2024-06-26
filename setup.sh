@@ -72,3 +72,6 @@ ln -s ~/.dotfiles/lazygit ~/.config/lazygit
 ## Link gitconfig and delta configuration
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/delta ~/.config/delta
+
+## Link zellij configuration
+ln -s ~/.dotfiles/zellij ~/.config/zellij
