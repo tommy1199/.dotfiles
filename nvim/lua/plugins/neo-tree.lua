@@ -8,7 +8,7 @@ return {
   },
   lazy = false,
   keys = {
-    { "<C-n>", ":Neotree filesystem toggle left<CR>" }
+    { "<leader>n", ":Neotree filesystem toggle left<CR>" }
   },
   opts = {
     filesystem = {

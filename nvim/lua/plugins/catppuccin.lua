@@ -15,11 +15,5 @@ return {
     integrations = {
       neotree = true,
     },
-    color_overrides = {
-      all = {
-        base = '#303030',
-        mantle = '#303030',
-      },
-    },
   },
 }

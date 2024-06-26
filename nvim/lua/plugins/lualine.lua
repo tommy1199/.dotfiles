@@ -9,7 +9,7 @@ return {
   },
   config = function(_, opts)
     local catppuccin = require 'lualine.themes.catppuccin-macchiato'
-    catppuccin.normal.c.bg = '#303030'
+    catppuccin.normal.c.bg = '#252739'
     opts.options.theme = catppuccin
     require('lualine').setup(opts)
   end,
