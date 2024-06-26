@@ -56,9 +56,6 @@ ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/fzf-git.sh ~/fzf-git.sh
 
-## Link tmux configuration
-ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
-
 ## Link bat themes and configuration
 ln -s ~/.dotfiles/bat ~/.config/bat
 bat cache --build
