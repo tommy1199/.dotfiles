@@ -1,5 +1,6 @@
 theme "catppuccin-macchiato"
-
+default_layout "mine"
+on_force_close "quit"
 ui {
     pane_frames {
         hide_session_name true
