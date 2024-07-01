@@ -1,4 +1,18 @@
 layout {
+    new_tab_template hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane
+        floating_panes {
+            pane {
+                width "80%"
+                height "80%"
+                x "10%"
+                y "10%"
+            }
+        }
+    }
     tab name="Main" hide_floating_panes=true {
         pane size=1 borderless=true {
             plugin location="tab-bar"
