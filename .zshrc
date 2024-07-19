@@ -64,8 +64,8 @@ alias cdr='cd-gitroot'
 alias clip="silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard"
 alias gcms="gaa && gcmsg 'Update' && gp"
 alias grpo="git remote prune origin"
-alias ls='lsd'
-alias lla='ls -la'
+alias ls='eza --icons=always'
+alias lla='ls -la --no-user --no-time'
 alias tree='ls --tree'
 alias treel='tree --long'
 alias lg='lazygit'
