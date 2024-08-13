@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+MAIN_DISPLAY=$(system_profiler SPDisplaysDataType | grep -B 3 'Main Display:' | awk '/Display Type/ {print $3}')
+
+if [[ $MAIN_DISPLAY = "Built-in" ]]; then
+  source "$CONFIG_DIR/sketchybarrc-laptop"
+else
+  source "$CONFIG_DIR/sketchybarrc-desktop"
+fi

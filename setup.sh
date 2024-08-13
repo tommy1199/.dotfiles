@@ -75,3 +75,12 @@ ln -s ~/.dotfiles/delta ~/.config/delta
 
 ## Link zellij configuration
 ln -s ~/.dotfiles/zellij ~/.config/zellij
+
+## Link yabai configuration
+ln -s ~/.dotfiles/yabai ~/.config/yabai
+
+## Link skhd configuration
+ln -s ~/.dotfiles/skhd ~/.config/skhd
+
+## Link sketchybar configuration
+ln -s ~/.dotfiles/sketchybar ~/.config/sketchybar
