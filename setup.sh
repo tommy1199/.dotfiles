@@ -75,3 +75,6 @@ ln -s ~/.dotfiles/delta ~/.config/delta
 
 ## Link zellij configuration
 ln -s ~/.dotfiles/zellij ~/.config/zellij
+
+## Link aerospace configuration
+ln -s ~/.dotfiles/aerospace ~/.config/aerospace
