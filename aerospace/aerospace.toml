@@ -76,3 +76,7 @@ run = "move-node-to-workspace B"
 [[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = "move-node-to-workspace T"
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij.ce'
+run = "move-node-to-workspace E"
