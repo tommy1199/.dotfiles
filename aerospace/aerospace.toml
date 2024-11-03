@@ -17,7 +17,7 @@ outer.left =       5
 outer.bottom =     5
 outer.top =        5
 outer.right =      5
- 
+
 [mode.main.binding]
 alt-shift-comma = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
@@ -78,5 +78,5 @@ if.app-id = 'org.alacritty'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij.ce'
+if.app-id = 'com.jetbrains.intellij.ce-EAP'
 run = "move-node-to-workspace E"

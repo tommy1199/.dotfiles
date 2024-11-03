@@ -133,3 +133,9 @@ eval "$(thefuck --alias fk)"
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sascha/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sascha/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sascha/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sascha/google-cloud-sdk/completion.zsh.inc'; fi
