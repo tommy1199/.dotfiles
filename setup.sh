@@ -63,8 +63,8 @@ ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/bat ~/.config/bat
 bat cache --build
 
-## Link alacritty configuration
-ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+## Link kitty configuration
+ln -s ~/.dotfiles/kitty ~/.config/kitty
 
 ## Link lazygit configuration
 ln -s ~/.dotfiles/lazygit ~/.config/lazygit
