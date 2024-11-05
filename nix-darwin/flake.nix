@@ -18,6 +18,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
         bat
+        delta
         devbox
         direnv
         dive
@@ -91,6 +92,8 @@
           "nikitabobko/tap"
         ];
         onActivation.cleanup = "zap";
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
       };
 
       system.activationScripts.applications.text = let
@@ -112,6 +115,17 @@
             ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
           done
       '';
+
+      system.defaults = {
+        dock.autohide = true;    
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.AppleICUForce24HourTime = true;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.KeyRepeat = 2;
+      };
+
+      security.pam.enableSudoTouchIdAuth = true;
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
