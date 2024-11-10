@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## Install nixos
+sh <(curl -L https://nixos.org/nix/install)
+
 ## Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 

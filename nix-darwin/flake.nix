@@ -24,12 +24,12 @@
         dive
         eza
         fastfetch
-        fnm
         fzf
+        git
         go
         grype
         jq
-        kustomize
+        lazydocker
         lazygit
         mkalias
         neovim
@@ -122,6 +122,7 @@
         loginwindow.GuestEnabled = false;
         NSGlobalDomain.AppleICUForce24HourTime = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.AppleShowAllExtensions = true;
         NSGlobalDomain.KeyRepeat = 2;
       };
 
@@ -136,6 +137,7 @@
 
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
+      programs.direnv.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;

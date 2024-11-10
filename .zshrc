@@ -33,6 +33,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export XDG_CONFIG_HOME="$HOME/.config"
 export BAT_THEME="Catppuccin Macchiato"
+export HOMEBREW_NO_ENV_HINTS=false
 
 uao () {
   unzip $1
@@ -72,10 +73,11 @@ alias lg='lazygit'
 alias vi="nvim"
 alias vim="nvim"
 alias cd="z"
+alias flakedit="nvim ~/.dotfiles/nix-darwin/flake.nix"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-source <(kubectl completion zsh)
-source <(kustomize completion zsh)
+command -v kubectl >/dev/null && . <(kubectl completion zsh)
+command -v kustomize >/dev/null && . <(kustomize completion zsh)
 command -v timoni >/dev/null && . <(timoni completion zsh) && compdef _timoni timoni
 
 
@@ -125,7 +127,6 @@ eval "$(pyenv init -)"
 export PATH="$(go env GOPATH)/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH:$HOME/.rd/bin:$HOME/.rvm/bin"
 
 eval "$(direnv hook zsh)"
-eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 eval "$(ngrok completion)"
