@@ -42,6 +42,7 @@
         thefuck
         yazi
         yq-go
+        zoom-us
         zoxide
       ];
 
@@ -82,7 +83,6 @@
           "steam"
           "the-unarchiver"
           "visual-studio-code"
-          "zoom"
         ];
         masApps = {
           "Xcode" = 497799835;
