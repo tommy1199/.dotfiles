@@ -6,9 +6,11 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -21,6 +23,7 @@
         delta
         devbox
         direnv
+        discord
         dive
         eza
         fastfetch
@@ -62,8 +65,6 @@
           "alfred"
           "android-file-transfer"
           "brave-browser"
-          "discord"
-          "drawio"
           "dropbox"
           "jetbrains-toolbox"
           "jitsi-meet"
@@ -109,7 +110,7 @@
           rm -rf /Applications/Nix\ Apps
           mkdir -p /Applications/Nix\ Apps
           find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-          while read src; do
+          while read -r src; do
             app_name=$(basename "$src")
             echo "copying $src" >&2
             ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
@@ -136,7 +137,6 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       # Enable alternative shell support in nix-darwin.
-      # programs.fish.enable = true;
       programs.direnv.enable = true;
 
       # Set Git commit hash for darwin-version.
@@ -148,6 +148,8 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+
+      users.users.sascha.home = "/Users/sascha";
     };
   in
   {
@@ -164,6 +166,12 @@
             user = "sascha";
             autoMigrate = true;
           };
+        }
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.sascha = import ./home.nix;
         }
       ];
     };

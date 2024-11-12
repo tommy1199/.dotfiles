@@ -44,40 +44,17 @@ curl -s "https://get.sdkman.io" | bash
 curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh
 sudo mv kubectl-crossplane /opt/homebrew/bin
 
-## Install color theme for iterm2
-curl https://raw.githubusercontent.com/herrbischoff/iterm2-gruvbox/master/gruvbox.itermcolors -o ~/Downloads/gruvbox.itermcolors
-
 ## Link Brewfile and zshrc to home directory
-[ -f ~/Brewfile ] && rm /Brewfile
-ln -s ~/.dotfiles/Brewfile ~/Brewfile
-[ -f ~/.zshrc ] && rm ~/.zshrc
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-[ -f ~/.config/starship.toml ] && rm ~/.config/starship.toml
-ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
-
-## Link neovim configuration
-ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/fzf-git.sh ~/fzf-git.sh
 
 ## Link tmux configuration
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 ## Link bat themes and configuration
-ln -s ~/.dotfiles/bat ~/.config/bat
 bat cache --build
-
-## Link kitty configuration
-ln -s ~/.dotfiles/kitty ~/.config/kitty
-
-## Link lazygit configuration
-ln -s ~/.dotfiles/lazygit ~/.config/lazygit
 
 ## Link gitconfig and delta configuration
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/delta ~/.config/delta
-
-## Link zellij configuration
-ln -s ~/.dotfiles/zellij ~/.config/zellij
 
 ## Link aerospace configuration
 ln -s ~/.dotfiles/aerospace ~/.config/aerospace
