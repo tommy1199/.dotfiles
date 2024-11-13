@@ -26,18 +26,14 @@
         discord
         dive
         eza
-        fastfetch
         fzf
         git
-        go
         grype
         jq
         lazydocker
         lazygit
         mkalias
         neovim
-        ngrok
-        pyenv
         ripgrep
         starship
         syft
@@ -60,10 +56,8 @@
         ];
         casks = [
           "1password"
-          "iina"
           "1password-cli"
           "alfred"
-          "android-file-transfer"
           "brave-browser"
           "dropbox"
           "jetbrains-toolbox"
@@ -78,7 +72,6 @@
           "nikitabobko/tap/aerospace"
           "notion"
           "orbstack"
-          "proxyman"
           "scummvm"
           "slack"
           "steam"
