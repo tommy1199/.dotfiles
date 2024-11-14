@@ -30,6 +30,7 @@
         git
         grype
         jq
+        krew
         lazydocker
         lazygit
         mkalias

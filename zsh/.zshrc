@@ -11,7 +11,6 @@ plugins=(
   gradle
   kubectl
   zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 HISTFILE=$HOME/.zhistory
@@ -114,22 +113,11 @@ _fzf_comprun() {
   esac
 }
 
-source ~/fzf-git.sh
-
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Add pyenv to PATH
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$(go env GOPATH)/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH:$HOME/.rd/bin:$HOME/.rvm/bin"
 
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-eval "$(ngrok completion)"
 eval "$(thefuck --alias fk)"
 
 bindkey "^[[A" history-search-backward
