@@ -44,7 +44,7 @@
 
   programs.zsh.shellAliases = {
     cat = "bat -p";
-    cdr = "cd-gitroot";
+    cdr = "cd $(git rev-parse --show-toplevel)";
     clip = "silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard";
     gcms = "gaa && gcmsg 'Update' && gp";
     grpo = "git remote prune origin";
