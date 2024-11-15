@@ -48,7 +48,6 @@
     clip = "silicon --pad-horiz 0 --pad-vert 0 --background '#ffffff' --theme OneHalfDark --to-clipboard";
     gcms = "gaa && gcmsg 'Update' && gp";
     grpo = "git remote prune origin";
-    ls = "eza --icons=always";
     ll = "ls -l --no-user --no-time";
     lla = "ll -a";
     tree = "ls --tree";
@@ -87,5 +86,12 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+    colors = "always";
+    icons = "always";
   };
 }
