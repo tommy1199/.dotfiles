@@ -68,6 +68,29 @@
     HOMEBREW_NO_ENV_HINTS = "false";
   };
 
+  programs.zsh.plugins = [
+    {
+      name = "zsh-kubectl";
+      file = "plugins/kubectl/kubectl.plugin.zsh";
+      src = pkgs.fetchFromGitHub {
+        owner = "ohmyzsh";
+        repo = "ohmyzsh";
+        rev = "ca5471fe496f00007727fd26db762d19519c2e8f";
+        sha256 = "rI673tQ3W4U9N5i8LZx9dpKzft7+Y0UZ7iTSJwnoSSE=";
+      };
+    }
+    {
+      name = "zsh-git";
+      file = "plugins/git/git.plugin.zsh";
+      src = pkgs.fetchFromGitHub {
+        owner = "ohmyzsh";
+        repo = "ohmyzsh";
+        rev = "ca5471fe496f00007727fd26db762d19519c2e8f";
+        sha256 = "rI673tQ3W4U9N5i8LZx9dpKzft7+Y0UZ7iTSJwnoSSE=";
+      };
+    }
+  ];
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
