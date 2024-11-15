@@ -90,7 +90,9 @@
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
       };
-
+      system.activationScripts.extraActivation.text = ''
+        softwareupdate --install-rosetta --agree-to-license
+      '';
       system.activationScripts.applications.text = let
         env = pkgs.buildEnv {
           name = "system-applications";
