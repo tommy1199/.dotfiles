@@ -47,7 +47,6 @@
     ".config/nvim".source = ../nvim;
     ".config/zellij".source = ../zellij;
     ".config/delta".source = ../delta;
-    ".config/bat".source = ../bat;
     ".config/kitty".source = ../kitty;
     ".tmux.conf".source = ../tmux/.tmux.conf;
   };
@@ -60,6 +59,22 @@
       "$HOME/.nix-profile/bin"
   ];
   programs.home-manager.enable = true;
+
+  programs.bat = {
+    enable = true;
+    config.theme = "catppuccin-macchiato";
+    themes = {
+      catppuccin-macchiato = {
+        src = pkgs.fetchFromGitHub {
+          "owner" = "catppuccin";
+          "repo" = "bat";
+          "rev" = "d2bbee4f7e7d5bac63c054e4d8eca57954b31471";
+          "sha256" = "x1yqPCWuoBSx/cI94eA+AWwhiSA42cLNUOFJl7qjhmw=";
+        };
+        file = "themes/Catppuccin Macchiato.tmTheme";
+      };
+    };
+  };
 
   programs.git = {
     enable = true;
@@ -129,7 +144,6 @@
     LANG = "en_US.UTF-8";
     EDITOR = "nvim";
     VISUAL = "nvim";
-    BAT_THEME = "Catppuccin Macchiato";
     HOMEBREW_NO_ENV_HINTS = "false";
   };
 
