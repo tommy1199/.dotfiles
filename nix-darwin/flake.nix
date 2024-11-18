@@ -19,31 +19,10 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
-        bat
-        delta
-        devbox
-        direnv
-        discord
-        dive
-        eza
-        fzf
         git
-        grype
-        jq
-        krew
-        lazydocker
-        lazygit
         mkalias
         neovim
-        ripgrep
-        starship
-        syft
-        tealdeer
-        thefuck
-        yazi
-        yq-go
-        zoom-us
-        zoxide
+        zsh
       ];
 
       fonts.packages = [

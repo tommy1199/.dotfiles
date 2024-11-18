@@ -7,6 +7,32 @@
 
 # Makes sense for user specific applications that shouldn't be available system-wide
   home.packages = with pkgs; [
+    bat
+    delta
+    devbox
+    direnv
+    discord
+    dive
+    eza
+    fzf
+    grype
+    jq
+    just
+    k9s
+    krew
+    kubectl
+    kustomize
+    lazydocker
+    lazygit
+    ripgrep
+    starship
+    syft
+    tealdeer
+    thefuck
+    yazi
+    yq-go
+    zoom-us
+    zoxide
     zsh-autosuggestions
     zsh-history-substring-search
     zsh-syntax-highlighting
