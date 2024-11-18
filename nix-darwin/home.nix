@@ -5,6 +5,8 @@
   home.homeDirectory = "/Users/sascha";
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
+  imports = [ ./starship.nix ];
+
 # Makes sense for user specific applications that shouldn't be available system-wide
   home.packages = with pkgs; [
     bat
@@ -42,7 +44,6 @@
   # plain files is through 'home.file'.
   home.file = {
     #".zshrc".source = ../zsh/.zshrc;
-    ".config/starship.toml".source = ../starship/starship.toml;
     ".config/nvim".source = ../nvim;
     ".config/zellij".source = ../zellij;
     ".config/delta".source = ../delta;
@@ -97,6 +98,7 @@
       };
     };
   };
+
 
   programs.zsh = {
     enable = true;
@@ -153,11 +155,6 @@
       };
     }
   ];
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 
   programs.zoxide = {
     enable = true;
