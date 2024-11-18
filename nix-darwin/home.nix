@@ -61,6 +61,20 @@
   ];
   programs.home-manager.enable = true;
 
+  programs.git = {
+    enable = true;
+    delta.enable = true;
+    lfs.enable = true;
+    userName = "sselzer";
+    userEmail = "sascha.selzer@gmail.com";
+    includes = [ { path = ../delta/themes/catppuccin.gitconfig; } ];
+    extraConfig = {
+      core.editor = "nvim";
+      delta.features = "catpuccin-macchiato";
+      delta.navigate = true;
+    };
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
