@@ -33,6 +33,7 @@
         enable = true;
         brews = [
           "mas"
+          "metalbear-co/mirrord/mirrord"
         ];
         casks = [
           "1password"
@@ -64,6 +65,7 @@
         };
         taps = [
           "nikitabobko/tap"
+          "metalbear-co/mirrord"
         ];
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;

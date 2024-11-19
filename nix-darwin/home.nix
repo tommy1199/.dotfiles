@@ -21,6 +21,7 @@
     jq
     just
     k9s
+    kns
     krew
     kubectl
     kustomize
