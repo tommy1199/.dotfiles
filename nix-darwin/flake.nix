@@ -22,6 +22,7 @@
         git
         mkalias
         neovim
+        watch
         zsh
       ];
 
