@@ -167,6 +167,11 @@
         sha256 = "rI673tQ3W4U9N5i8LZx9dpKzft7+Y0UZ7iTSJwnoSSE=";
       };
     }
+    {
+      name = "vi-mode";
+      src = pkgs.zsh-vi-mode;
+      file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+    }
   ];
 
   programs.zoxide = {
