@@ -26,10 +26,12 @@
     kustomize
     lazydocker
     lazygit
+    pandoc
     ripgrep
     starship
     syft
     tealdeer
+    tectonic
     thefuck
     yazi
     yq-go
