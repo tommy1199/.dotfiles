@@ -7,7 +7,6 @@
 
   imports = [ ./starship.nix ];
 
-# Makes sense for user specific applications that shouldn't be available system-wide
   home.packages = with pkgs; [
     bat
     delta
@@ -41,12 +40,10 @@
     zsh-syntax-highlighting
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
-    #".zshrc".source = ../zsh/.zshrc;
     ".config/nvim".source = ../nvim;
     ".config/zellij".source = ../zellij;
+    ".config/karabiner".source = ../karabiner;
     ".config/delta".source = ../delta;
     ".config/kitty".source = ../kitty;
     ".tmux.conf".source = ../tmux/.tmux.conf;
@@ -114,7 +111,6 @@
       };
     };
   };
-
 
   programs.zsh = {
     enable = true;
