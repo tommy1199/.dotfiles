@@ -38,7 +38,6 @@
     zoom-us
     zoxide
     zsh-autosuggestions
-    zsh-history-substring-search
     zsh-syntax-highlighting
   ];
 
@@ -118,7 +117,6 @@
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    historySubstringSearch.enable = true;
   };
 
   programs.zsh.shellAliases = {
