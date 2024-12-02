@@ -28,7 +28,7 @@ return {
         capabilities = capabilities,
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "cd", vim.lsp.buf.definition, { desc = "Go to [d]efinition" })
+      vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to [d]efinition" })
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code [A]ction" })
     end,
     dependencies = {
