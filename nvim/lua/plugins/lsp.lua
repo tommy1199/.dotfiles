@@ -28,10 +28,12 @@ return {
         capabilities = capabilities,
       }
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, { desc = 'Go to [d]efinition' })
-      vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code [A]ction' })
-      vim.keymap.set({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, { desc = '[R]ename' })
-      vim.keymap.set({'n', 'v'}, '<leader>cs', vim.lsp.buf.document_symbol, {desc = '[S]ymbols'})
+      vim.keymap.set('n', '<leader>cgd', vim.lsp.buf.definition, { desc = '[g]oto [d]efinition' })
+      vim.keymap.set('n', '<leader>cgi', vim.lsp.buf.implementation, { desc = '[g]oto [i]mplementation' })
+      vim.keymap.set('n', '<leader>cgr', vim.lsp.buf.references, { desc = '[g]oto [i]mplementation' })
+      vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'code [a]ction' })
+      vim.keymap.set({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, { desc = '[r]ename' })
+      vim.keymap.set({'n', 'v'}, '<leader>cs', vim.lsp.buf.document_symbol, {desc = '[s]ymbols'})
     end,
     dependencies = {
       { 'folke/neodev.nvim', opts = {} },
