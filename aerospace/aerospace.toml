@@ -18,44 +18,44 @@ outer.top =        5
 outer.right =      5
 
 [mode.main.binding]
-alt-shift-comma = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+ctrl-shift-comma = 'layout tiles horizontal vertical'
+ctrl-comma = 'layout accordion horizontal vertical'
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+ctrl-h = 'focus left'
+ctrl-j = 'focus down'
+ctrl-k = 'focus up'
+ctrl-l = 'focus right'
 
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
 
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+ctrl-shift-minus = 'resize smart -50'
+ctrl-shift-equal = 'resize smart +50'
 
-alt-m = 'fullscreen'
+ctrl-m = 'fullscreen'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-b = 'workspace B'
-alt-e = 'workspace E'
-alt-t = 'workspace T'
+ctrl-1 = 'workspace 1'
+ctrl-2 = 'workspace 2'
+ctrl-3 = 'workspace 3'
+ctrl-4 = 'workspace 4'
+ctrl-b = 'workspace B'
+ctrl-e = 'workspace E'
+ctrl-t = 'workspace T'
 
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-b = 'move-node-to-workspace B'
-alt-shift-e = 'move-node-to-workspace E'
-alt-shift-t = 'move-node-to-workspace T'
+ctrl-shift-1 = 'move-node-to-workspace 1'
+ctrl-shift-2 = 'move-node-to-workspace 2'
+ctrl-shift-3 = 'move-node-to-workspace 3'
+ctrl-shift-4 = 'move-node-to-workspace 4'
+ctrl-shift-b = 'move-node-to-workspace B'
+ctrl-shift-e = 'move-node-to-workspace E'
+ctrl-shift-t = 'move-node-to-workspace T'
 
-alt-tab = 'workspace-back-and-forth'
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+ctrl-tab = 'workspace-back-and-forth'
+ctrl-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-alt-shift-period = 'mode service'
+ctrl-shift-period = 'mode service'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
@@ -63,19 +63,19 @@ r = ['flatten-workspace-tree', 'mode main']
 f = ['layout floating tiling', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+ctrl-shift-h = ['join-with left', 'mode main']
+ctrl-shift-j = ['join-with down', 'mode main']
+ctrl-shift-k = ['join-with up', 'mode main']
+ctrl-shift-l = ['join-with right', 'mode main']
 
-[[on-window-detected]]
-if.app-id = 'com.brave.Browser'
-run = "move-node-to-workspace B"
+#[[on-window-detected]]
+#if.app-id = 'com.brave.Browser'
+#run = "move-node-to-workspace B"
 
-[[on-window-detected]]
-if.app-id = 'org.alacritty'
-run = "move-node-to-workspace T"
+#[[on-window-detected]]
+#if.app-id = 'org.alacritty'
+#run = "move-node-to-workspace T"
 
-[[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij.ce-EAP'
-run = "move-node-to-workspace E"
+#[[on-window-detected]]
+#if.app-id = 'com.jetbrains.intellij.ce-EAP'
+#run = "move-node-to-workspace E"
