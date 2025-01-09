@@ -34,7 +34,7 @@ ctrl-shift-l = 'move right'
 ctrl-shift-minus = 'resize smart -50'
 ctrl-shift-equal = 'resize smart +50'
 
-ctrl-m = 'fullscreen'
+ctrl-f = 'fullscreen'
 
 ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
@@ -83,3 +83,7 @@ run = "move-node-to-workspace E"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = "move-node-to-workspace E"
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = "move-node-to-workspace M"
