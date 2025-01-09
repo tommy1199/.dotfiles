@@ -84,6 +84,7 @@
     includes = [ { path = ../delta/themes/catppuccin.gitconfig; } ];
     extraConfig = {
       core.editor = "nvim";
+      init.defaultBranch = "main";
       delta.features = "catpuccin-macchiato";
       delta.navigate = true;
     };
