@@ -68,14 +68,18 @@ ctrl-shift-j = ['join-with down', 'mode main']
 ctrl-shift-k = ['join-with up', 'mode main']
 ctrl-shift-l = ['join-with right', 'mode main']
 
-#[[on-window-detected]]
-#if.app-id = 'com.brave.Browser'
-#run = "move-node-to-workspace B"
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = "move-node-to-workspace B"
 
-#[[on-window-detected]]
-#if.app-id = 'org.alacritty'
-#run = "move-node-to-workspace T"
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = "move-node-to-workspace T"
 
-#[[on-window-detected]]
-#if.app-id = 'com.jetbrains.intellij.ce-EAP'
-#run = "move-node-to-workspace E"
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij.ce-EAP'
+run = "move-node-to-workspace E"
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = "move-node-to-workspace E"
