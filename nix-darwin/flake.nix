@@ -36,6 +36,7 @@
         brews = [
           "mas"
           "metalbear-co/mirrord/mirrord"
+          "vexctl"
         ];
         casks = [
           "1password"
