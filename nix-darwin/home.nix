@@ -87,6 +87,7 @@
       init.defaultBranch = "main";
       delta.features = "catpuccin-macchiato";
       delta.navigate = true;
+      pull.rebase = true;
     };
   };
 
