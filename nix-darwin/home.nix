@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     bat
+    chezmoi
     delta
     devbox
     direnv
