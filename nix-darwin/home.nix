@@ -32,7 +32,6 @@
     starship
     syft
     tealdeer
-    tectonic
     thefuck
     yazi
     yq-go
