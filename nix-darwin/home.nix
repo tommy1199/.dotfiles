@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     bat
     chezmoi
+    civo
     csview
     delta
     devbox
