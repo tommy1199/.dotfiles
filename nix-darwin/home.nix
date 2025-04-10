@@ -44,8 +44,6 @@
   ];
 
   home.file = {
-    ".config/nvim".source = ../nvim;
-    ".config/zellij".source = ../zellij;
     ".config/karabiner".source = ../karabiner;
     ".config/delta".source = ../delta;
     ".config/kitty".source = ../kitty;
