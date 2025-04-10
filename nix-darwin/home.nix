@@ -43,13 +43,6 @@
     zsh-syntax-highlighting
   ];
 
-  home.file = {
-    ".config/karabiner".source = ../karabiner;
-    ".config/delta".source = ../delta;
-    ".config/kitty".source = ../kitty;
-    ".tmux.conf".source = ../tmux/.tmux.conf;
-  };
-
   home.sessionVariables = {
   };
 
@@ -81,7 +74,7 @@
     lfs.enable = true;
     userName = "sselzer";
     userEmail = "sascha.selzer@gmail.com";
-    includes = [ { path = ../delta/themes/catppuccin.gitconfig; } ];
+    includes = [ { path = ../Configs/delta/.config/delta/themes/catppuccin.gitconfig; } ];
     extraConfig = {
       core.editor = "nvim";
       init.defaultBranch = "main";
