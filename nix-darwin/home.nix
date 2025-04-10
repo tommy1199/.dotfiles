@@ -9,7 +9,6 @@
 
   home.packages = with pkgs; [
     bat
-    chezmoi
     civo
     csview
     delta
@@ -35,6 +34,7 @@
     syft
     tealdeer
     thefuck
+    tuckr
     yazi
     yq-go
     zoom-us
