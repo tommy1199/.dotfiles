@@ -23,6 +23,7 @@
         git
         mkalias
         neovim
+        viddy
         watch
         zsh
       ];
