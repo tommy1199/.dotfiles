@@ -21,11 +21,14 @@
       environment.systemPackages = with pkgs; [
         btop
         git
+        go
         mkalias
         neovim
+        nodejs_23
         viddy
         watch
         zsh
+        zulu23
       ];
 
       fonts.packages = with pkgs; [
