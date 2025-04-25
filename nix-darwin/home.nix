@@ -136,7 +136,7 @@
     LANG = "en_US.UTF-8";
     EDITOR = "nvim";
     VISUAL = "nvim";
-    HOMEBREW_NO_ENV_HINTS = "false";
+    HOMEBREW_NO_ENV_HINTS = "1";
   };
 
   programs.zsh.plugins = [
