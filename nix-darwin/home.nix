@@ -37,7 +37,6 @@
     tuckr
     yazi
     yq-go
-    zoom-us
     zoxide
     zsh-autosuggestions
     zsh-syntax-highlighting
