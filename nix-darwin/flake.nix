@@ -25,6 +25,7 @@
         mkalias
         neovim
         nodejs_23
+        nushell
         viddy
         watch
         zsh
@@ -48,6 +49,7 @@
           "alfred"
           "brave-browser"
           "dropbox"
+          "handbrake"
           "jetbrains-toolbox"
           "jitsi-meet"
           "karabiner-elements"
@@ -65,6 +67,7 @@
           "steam"
           "the-unarchiver"
           "visual-studio-code"
+          "vlc"
         ];
         masApps = {
           "Xcode" = 497799835;
