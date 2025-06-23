@@ -24,7 +24,7 @@
         go
         mkalias
         neovim
-        nodejs_23
+        nodejs_24
         nushell
         viddy
         watch
@@ -133,6 +133,7 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
 
       users.users.sascha.home = "/Users/sascha";
+      system.primaryUser = "sascha";
     };
   in
   {

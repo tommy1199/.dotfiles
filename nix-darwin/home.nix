@@ -29,11 +29,11 @@
     lazydocker
     lazygit
     pandoc
+    pay-respects
     ripgrep
     starship
     syft
     tealdeer
-    thefuck
     tuckr
     yazi
     yq-go
