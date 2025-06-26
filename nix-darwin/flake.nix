@@ -26,7 +26,6 @@
         mkalias
         neovim
         nodejs_24
-        nushell
         viddy
         watch
         zsh
