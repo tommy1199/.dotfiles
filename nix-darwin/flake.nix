@@ -22,6 +22,7 @@
         btop
         git
         go
+        libdvdcss
         mkalias
         neovim
         nodejs_24
