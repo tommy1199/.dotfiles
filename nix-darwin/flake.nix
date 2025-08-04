@@ -63,6 +63,7 @@
           "notion"
           "orbstack"
           "scummvm"
+          "spotify"
           "slack"
           "steam"
           "the-unarchiver"
