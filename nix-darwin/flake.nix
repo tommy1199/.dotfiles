@@ -48,7 +48,6 @@
           "1password"
           "1password-cli"
           "alfred"
-          "brave-browser"
           "dropbox"
           "handbrake"
           "jetbrains-toolbox"
@@ -69,6 +68,7 @@
           "steam"
           "the-unarchiver"
           "visual-studio-code"
+          "vivaldi"
           "vlc"
         ];
         masApps = {
