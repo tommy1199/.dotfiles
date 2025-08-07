@@ -43,6 +43,7 @@ ctrl-4 = 'workspace 4'
 ctrl-b = 'workspace B'
 ctrl-e = 'workspace E'
 ctrl-t = 'workspace T'
+ctrl-m = 'workspace M'
 
 ctrl-shift-1 = 'move-node-to-workspace 1'
 ctrl-shift-2 = 'move-node-to-workspace 2'
@@ -51,6 +52,7 @@ ctrl-shift-4 = 'move-node-to-workspace 4'
 ctrl-shift-b = 'move-node-to-workspace B'
 ctrl-shift-e = 'move-node-to-workspace E'
 ctrl-shift-t = 'move-node-to-workspace T'
+ctrl-shift-m = 'move-node-to-workspace M'
 
 ctrl-tab = 'workspace-back-and-forth'
 ctrl-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -77,7 +79,7 @@ if.app-id = 'net.kovidgoyal.kitty'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij.ce-EAP'
+if.app-id = 'com.jetbrains.intellij.ce'
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
