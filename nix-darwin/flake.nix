@@ -70,6 +70,7 @@
           "visual-studio-code"
           "vivaldi"
           "vlc"
+          "zoom"
         ];
         masApps = {
           "Xcode" = 497799835;
