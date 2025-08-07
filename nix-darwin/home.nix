@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "sascha";
@@ -112,6 +112,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
   };
+
+  programs.zsh.initContent = ''
+    eval "$(pay-respects zsh)"
+  '';
 
   programs.zsh.shellAliases = {
     cat = "bat -p";
