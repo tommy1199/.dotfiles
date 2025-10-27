@@ -25,6 +25,7 @@
     kns
     krew
     kubectl
+    kubefwd
     kustomize
     lazydocker
     lazygit
@@ -67,14 +68,18 @@
     };
   };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.git = {
     enable = true;
-    delta.enable = true;
     lfs.enable = true;
-    userName = "sselzer";
-    userEmail = "sascha.selzer@gmail.com";
     includes = [ { path = ../Configs/delta/.config/delta/themes/catppuccin.gitconfig; } ];
-    extraConfig = {
+    settings = {
+      user.email = "sascha.selzer@gmail.com";
+      user.name = "sselzer";
       core.editor = "nvim";
       init.defaultBranch = "main";
       delta.features = "catpuccin-macchiato";
