@@ -3,7 +3,7 @@
 {
   home.username = "sascha";
   home.homeDirectory = "/Users/sascha";
-  home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "25.11"; # Please read the comment before changing.
 
   imports = [ ./starship.nix ];
 
