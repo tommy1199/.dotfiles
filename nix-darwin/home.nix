@@ -136,6 +136,7 @@
     vi = "nvim";
     vim = "nvim";
     cd = "z";
+    asprof = "async-profiler";
     flakedit = "nvim ~/.dotfiles/nix-darwin/flake.nix";
   };
 

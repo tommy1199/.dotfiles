@@ -19,8 +19,9 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
+        async-profiler
         btop
-        dogdns
+        doggo
         git
         go
         libdvdcss
@@ -30,7 +31,7 @@
         viddy
         watch
         zsh
-        zulu23
+        zulu25
       ];
 
       fonts.packages = with pkgs; [
