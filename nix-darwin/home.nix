@@ -32,6 +32,7 @@
     pandoc
     pay-respects
     ripgrep
+    silicon
     starship
     syft
     tealdeer
