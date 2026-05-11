@@ -193,4 +193,7 @@
     colors = "always";
     icons = "always";
   };
+
+  services.ollama.enable = true;
+
 }

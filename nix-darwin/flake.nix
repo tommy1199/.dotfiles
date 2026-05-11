@@ -42,6 +42,7 @@
       homebrew = {
         enable = true;
         brews = [
+          "charmbracelet/tap/crush"
           "mas"
           "metalbear-co/mirrord/mirrord"
           "vexctl"
@@ -50,6 +51,7 @@
           "1password"
           "1password-cli"
           "alfred"
+          "claude-code@latest"
           "dropbox"
           "ghostty"
           "handbrake-app"
@@ -63,6 +65,7 @@
           "orbstack"
           "scummvm-app"
           "slack"
+          "snes9x"
           "spotify"
           "steam"
           "the-unarchiver"
@@ -72,8 +75,6 @@
           "zoom"
         ];
         masApps = {
-          "Xcode" = 497799835;
-          "AusweisApp Bund" = 948660805;
         };
         taps = [
           "nikitabobko/tap"
@@ -82,10 +83,15 @@
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
+        onActivation.extraEnv = {
+          HOMEBREW_NO_ANALYTICS = "1";
+          HOMEBREW_NO_ENV_HINTS = "1";
+        };
       };
 
       services.aerospace.enable = true;
       services.aerospace.settings = pkgs.lib.importTOML ../aerospace/aerospace.toml;
+
 
       system.defaults = {
         dock.autohide = true;    
