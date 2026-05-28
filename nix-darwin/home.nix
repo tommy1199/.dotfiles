@@ -4,6 +4,7 @@
   home.username = "sascha";
   home.homeDirectory = "/Users/sascha";
   home.stateVersion = "26.05"; # Please read the comment before changing.
+  home.enableNixpkgsReleaseCheck = false;
 
   imports = [ ./starship.nix ];
 
