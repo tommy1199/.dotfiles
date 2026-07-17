@@ -15,7 +15,6 @@
     delta
     devbox
     direnv
-    discord
     dive
     eza
     fzf

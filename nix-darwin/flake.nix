@@ -68,6 +68,7 @@
           "snes9x"
           "spotify"
           "steam"
+          "surfshark"
           "the-unarchiver"
           "visual-studio-code"
           "vivaldi"
