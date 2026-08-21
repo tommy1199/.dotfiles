@@ -92,9 +92,9 @@
   programs.lazygit = {
     enable = true;
     settings = {
-      git.pagers = [{
+      git.diffRenderers = [{
         colorArg = "always";
-        pager = "delta --dark --paging=never";
+        command = "delta --dark --paging=never";
       }];
       gui.theme = {
         activeBorderColor = [ "#f5a97f" "bold" ];
@@ -134,6 +134,7 @@
     tree = "ls --tree";
     treel = "tree --long";
     lg = "lazygit";
+    lzd = "lazydocker";
     vi = "nvim";
     vim = "nvim";
     cd = "z";
