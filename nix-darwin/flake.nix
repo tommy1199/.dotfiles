@@ -144,12 +144,12 @@
         }
         home-manager.darwinModules.home-manager
         {
+          home-manager.users.sascha = import ./home.nix;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.sharedModules = [
             mac-app-util.homeManagerModules.default
           ];
-          home-manager.users.sascha = import ./home.nix;
         }
       ];
     };
