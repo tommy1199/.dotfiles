@@ -20,7 +20,6 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
-        async-profiler
         btop
         doggo
         git
@@ -32,7 +31,6 @@
         viddy
         watch
         zsh
-        zulu25
       ];
 
       fonts.packages = with pkgs; [
@@ -43,18 +41,22 @@
         enable = true;
         brews = [
           "charmbracelet/tap/crush"
+          "container"
           "mas"
           "metalbear-co/mirrord/mirrord"
           "vexctl"
+          "async-profiler"
         ];
         casks = [
           "1password"
           "1password-cli"
           "alfred"
           "claude-code@latest"
+          "davit"
           "dropbox"
           "ghostty"
           "handbrake-app"
+          "jdk-mission-control"
           "jetbrains-toolbox"
           "jitsi-meet"
           "karabiner-elements"
@@ -69,6 +71,7 @@
           "spotify"
           "steam"
           "surfshark"
+          "temurin@21"
           "the-unarchiver"
           "visual-studio-code"
           "vivaldi"
@@ -78,8 +81,9 @@
         masApps = {
         };
         taps = [
-          "nikitabobko/tap"
           "metalbear-co/mirrord"
+          "nikitabobko/tap"
+          "wouterdebie/tap"
         ];
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
