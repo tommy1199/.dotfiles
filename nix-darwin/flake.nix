@@ -140,10 +140,10 @@
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
-            enable = true;
+            enable = false;
             enableRosetta = true;
             user = "sascha";
-            autoMigrate = true;
+            autoMigrate = false;
           };
         }
         home-manager.darwinModules.home-manager
