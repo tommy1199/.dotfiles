@@ -11,4 +11,5 @@ echo "Clone dotfiles"
 nix-shell -p git --run 'git clone https://github.com/tommy1199/.dotfiles' ~/.dotfiles
 echo "Run nix switch"
 nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ~/.dotfiles/nix-darwin#devmac
+echo "Link dotfiles to home"
 tuckr add \*
