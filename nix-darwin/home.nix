@@ -142,6 +142,10 @@
     flakedit = "nvim ~/.dotfiles/nix-darwin/flake.nix";
   };
 
+  programs.zsh.profileExtra = ''
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+  '';
+
   programs.zsh.sessionVariables = {
     JUST_SUPPRESS_DOTENV_LOAD_WARNING = "1";
     LANG = "en_US.UTF-8";
