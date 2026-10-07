@@ -28,6 +28,7 @@
         mkalias
         neovim
         nodejs_24
+        tmux
         viddy
         watch
         zsh

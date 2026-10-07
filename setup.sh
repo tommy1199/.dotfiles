@@ -8,8 +8,10 @@ echo "Install homebrew"
 echo "Install nix"
 sh <(curl -L https://nixos.org/nix/install)
 echo "Clone dotfiles"
-nix-shell -p git --run 'git clone https://github.com/tommy1199/.dotfiles' ~/.dotfiles
+nix-shell -p git --run 'git clone https://github.com/tommy1199/.dotfiles ~/.dotfiles'
 echo "Run nix switch"
 nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ~/.dotfiles/nix-darwin#devmac
+echo "Clone tpm"
+nix-shell -p git --run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 echo "Link dotfiles to home"
 tuckr add \*
