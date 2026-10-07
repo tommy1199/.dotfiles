@@ -29,6 +29,7 @@
         neovim
         nodejs_24
         tmux
+        tuios
         viddy
         watch
         zsh
@@ -54,6 +55,7 @@
           "alfred"
           "claude-code@latest"
           "davit"
+          "docker-desktop"
           "dropbox"
           "ghostty"
           "handbrake-app"
