@@ -18,6 +18,7 @@
     dive
     eza
     fzf
+    glow
     grype
     jq
     just
@@ -33,6 +34,7 @@
     pay-respects
     ripgrep
     silicon
+    slides
     starship
     syft
     tealdeer
