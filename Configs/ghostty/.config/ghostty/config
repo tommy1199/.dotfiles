@@ -1,2 +1,7 @@
-theme = Catppuccin Mocca
-window-decoration = none
+theme = Catppuccin Mocha
+window-decoration = true
+background-blur-radius = 20
+macos-titlebar-style = hidden
+window-padding-x = 10
+window-padding-y = 10
+mouse-hide-while-typing = true
