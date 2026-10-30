@@ -5,3 +5,6 @@ macos-titlebar-style = hidden
 window-padding-x = 10
 window-padding-y = 10
 mouse-hide-while-typing = true
+
+# Right Option sends Alt (for <M-…> keymaps), left Option keeps composing chars like @ { } [ ] | ~
+macos-option-as-alt = right
