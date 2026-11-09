@@ -155,6 +155,8 @@
           home-manager.users.sascha = import ./home.nix;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          # Move unmanaged files that would be clobbered aside instead of failing
+          home-manager.backupFileExtension = "backup";
           home-manager.sharedModules = [
             mac-app-util.homeManagerModules.default
           ];
